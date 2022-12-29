@@ -8,6 +8,11 @@ carreira('Engenheiro de Materiais') :- materiais,!.
 carreira('Engenheiro de Minas') :- minas,!.
 carreira('Engenheiro Mecatrônico') :- mecatronico,!.
 
+% Ciencias Economicas
+carreira('Licenciado em Administração') :- administracao,!.
+carreira('Contador') :- contador,!.
+carreira('Economista') :- economista,!.
+
 % Ciências Agropecuárias
 carrera('Engenheiro Agricola'):-agricola,!.
 carrera('Engenheiro Zootecnista'):-zootecnista,!.
