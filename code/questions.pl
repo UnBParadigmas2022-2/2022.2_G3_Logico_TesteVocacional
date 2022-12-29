@@ -35,6 +35,24 @@ pergunta('Você tem grande curiosidade e capacidade em procurar saber como as co
 pergunta('Você tem grande capacidade para criar coisas?'), 
 pergunta('Você tem habilidade em criar soluções tecnológicas?').
 
+
+% Ciencias Economicas
+administracao :-
+pergunta('Você tem habilidades para exercer lideranças organizacionais?'),
+pergunta('Você tem facilidade para trabalhar em equipe?'),
+pergunta('Você tem capacidade de assumir responsabilidade em tomada de decisões?').
+
+contador :-
+pergunta('Você tem capacidade em exercer liderança pessoal em grupos de trabalho?'),
+pergunta('Você tem capacidade de assumir responsabilidade em tomada de decisões?')
+pergunta('Você tem facilidade em matemática geral, comercial e financeira?').
+
+economista :-
+pergunta('Você tem sentidos realista e prático?'),
+pergunta('Você tem capacidade e habilidade em assumir posições de liderança?'),
+pergunta('Você tem visão de futuro, para projetar políticas de largo alcance?').
+
+
 % Ciências Agropecuárias
 agricola:-
 pergunta('Possui facildade para entender matemática aplicada?'),
