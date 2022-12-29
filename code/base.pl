@@ -7,3 +7,12 @@ carreira('Engenheiro de Sistemas') :- sistemas,!.
 carreira('Engenheiro de Materiais') :- materiais,!.
 carreira('Engenheiro de Minas') :- minas,!.
 carreira('Engenheiro Mecatrônico') :- mecatronico,!.
+
+% Ciências Agropecuárias
+carrera('Engenheiro Agricola'):-agricola,!.
+carrera('Engenheiro Zootecnista'):-zootecnista,!.
+carrera('Engenheiro Agronomo'):- agronomo,!.
+
+% Direito e Ciencias Politicas
+carrera('Advogado'):- advogado,!.
+carrera('Cientista Politico'):- politico,!.
