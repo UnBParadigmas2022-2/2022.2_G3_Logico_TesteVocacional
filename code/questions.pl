@@ -83,6 +83,13 @@ pergunta('Possui vontade de realizar estudos e pesquisas sociais além de econom
 pergunta('Possui afinidade em elaborar documentos técnicos?'),
 pergunta('Possui interesse em gestão territorial e socioambiental?').
 
+% Enfermagem
+enfermeiro:-
+pergunta('Você se sente confortável em atender e ajudar outras pessoas?'),
+pergunta('Você tem vontade de se comunicar e interagir ajudando pessoas com seu trabalho?'),
+pergunta('Você tem controle emocional como também afinidade pelas ciencias biológicas, psicolóigicas e sociais?').
+
+
 % Ciencias Humanas
 sociais:-
 pergunta('Você tem boa capacidade de observação, compreenção, análise, sintese de problemas sociais?')
@@ -111,6 +118,22 @@ matematico:-
 pergunta('Você tem capacidade de abstração e pensamento lógico?'), 
 pergunta('Você tem habilidade para lidar com matemática?'),
 pergunta('Você tem um alto grau de responsabilidade e disciplina para o trabalho?').
+
+% Ciências Biológicas
+biologo:-
+pergunta('Você tem interesse nas ciências biológicas e afins?'),
+pergunta('Você tem identificação com a natureza?'),
+pergunta('Você tem interesse em investigar a dinâmica dos seres vivos?').
+
+microbiologo:-
+pergunta('Você tem interesse em trabalhar em laboratórios manuseando instrumentos?'),
+pergunta('Você tem interesse em trabalhar em laboratórios manipulando sustancias?'),
+pergunta('Você tem interesse em trabalhar em laboratorios manipulando microorganismos?').
+
+marinho:-
+pergunta('Você costuma se interessar por ambientes e seres marinhos?'),
+pergunta('Você tem curiosidade em buscar soluções encontrados nos ambientes marinhos?'),
+pergunta('Você gostaria de trabalhar em ambientes aquáticos, mesmo que isso seja rotineiro e exija também habilidades físicas como natação?')
 
 % Educação e Ciencias Da comunicação
 ccomunicacao:-

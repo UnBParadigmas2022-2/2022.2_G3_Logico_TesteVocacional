@@ -14,6 +14,11 @@ carreira('Licenciado em Administração') :- administracao,!.
 carreira('Contador') :- contador,!.
 carreira('Economista') :- economista,!.
 
+% Ciencias Biologicas
+carreira('Biologo'):-biologo,!.
+carreira('Biologo Microbiologo'):-microbiologo,!.
+carreira('Biologo Marinho'):-marinho,!
+
 % Ciências Agropecuárias
 carreira('Engenheiro Agricola'):-agricola,!.
 carreira('Engenheiro Zootecnista'):-zootecnista,!.
@@ -23,7 +28,10 @@ carreira('Engenheiro Agronomo'):- agronomo,!.
 carreira('Advogado'):- advogado,!.
 carreira('Cientista Politico'):- politico,!.
 
-%Ciencias Humanas
+% Enfermagem
+carreira('Enfermeiro'):-enfermeiro,!.
+
+% Ciencias Humanas
 carreira('Cientista Social'):- sociais,!.
 
 % Saude
