@@ -15,13 +15,16 @@ carreira('Contador') :- contador,!.
 carreira('Economista') :- economista,!.
 
 % Ciências Agropecuárias
-carrera('Engenheiro Agricola'):-agricola,!.
-carrera('Engenheiro Zootecnista'):-zootecnista,!.
-carrera('Engenheiro Agronomo'):- agronomo,!.
+carreira('Engenheiro Agricola'):-agricola,!.
+carreira('Engenheiro Zootecnista'):-zootecnista,!.
+carreira('Engenheiro Agronomo'):- agronomo,!.
 
 % Direito e Ciencias Politicas
-carrera('Advogado'):- advogado,!.
-carrera('Cientista Politico'):- politico,!.
+carreira('Advogado'):- advogado,!.
+carreira('Cientista Politico'):- politico,!.
+
+%Ciencias Humanas
+carreira('Cientista Social'):- sociais,!.
 
 % Saude
 carreira('Medico'):- medico,!.

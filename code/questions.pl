@@ -83,6 +83,13 @@ pergunta('Possui vontade de realizar estudos e pesquisas sociais além de econom
 pergunta('Possui afinidade em elaborar documentos técnicos?'),
 pergunta('Possui interesse em gestão territorial e socioambiental?').
 
+% Ciencias Humanas
+sociais:-
+pergunta('Você tem boa capacidade de observação, compreenção, análise, sintese de problemas sociais?')
+pergunta('Você tem capacidade de liderança?')
+pergunta('Você tem vocação de serviço e sensibilidade social?')
+
+
 % Saude 
 medico:-
 pergunta('Você tem vocação para o serviço e sensibilidade social?'),
