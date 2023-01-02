@@ -76,3 +76,23 @@ education_test(EducationLevel) :-
 	;
 		write('Entrada inválida!')
 	).
+
+experience_test(ExperienceLevel) :-
+	( ExperienceLevel == 1 ->
+		write('Com base na sua faixa etária, experiência e nível de educação, recomendamos os seguintes trabalhos:'),nl,
+        write('A. Assistente administrativo nível básico.'), nl,
+        write('B. Representante de atendimento ao cliente.'), nl,
+        write('C. Representante de vendas.'), nl
+	; ExperienceLevel == 2 ->
+		write('Com base na sua faixa etária, experiência e nível de educação, recomendamos os seguintes trabalhos:'),nl,
+        write('A. Gerente de recursos humanos. '), nl,
+        write('B. Analista ne negócios. '), nl,
+        write('C. Gerente de projeto. '), nl
+	; ExperienceLevel == 3 ->
+		write('Com base na sua faixa etária, experiência e nível de educação, recomendamos os seguintes trabalhos:'),nl,
+        write('A. Diretor de operações '), nl,
+        write('B. Diretor financeiro '), nl,
+        write('C. Diretor executivo '), nl
+	;
+		write('Entrada inválida!')
+	).
