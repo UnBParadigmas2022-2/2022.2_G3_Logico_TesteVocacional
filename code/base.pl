@@ -7,6 +7,7 @@ carreira('Engenheiro de Sistemas') :- sistemas,!.
 carreira('Engenheiro de Materiais') :- materiais,!.
 carreira('Engenheiro de Minas') :- minas,!.
 carreira('Engenheiro Mecatrônico') :- mecatronico,!.
+carreira('Engenheiro Quimica') :- quimica,!.
 
 % Ciencias Economicas
 carreira('Licenciado em Administração') :- administracao,!.

@@ -33,8 +33,11 @@ pergunta('Você tem capacidade de subir montanhas?').
 mecatronico :-
 pergunta('Você tem grande curiosidade e capacidade em procurar saber como as coisas fucionam?'), 
 pergunta('Você tem grande capacidade para criar coisas?'), 
-pergunta('Você tem habilidade em criar soluções tecnológicas?').
 
+quimica :-
+pergunta('Você tem boas condições sensoriais e boa memória?')
+pergunta('Você tem capacidade dedutiva?')
+pergunta('Você tem capacidade para projetar soluções do tipo prático?')
 
 % Ciencias Economicas
 administracao :-
