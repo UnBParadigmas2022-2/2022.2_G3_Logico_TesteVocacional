@@ -62,8 +62,8 @@ pergunta('Possui capacidade para trabalho no campo?').
 zootecnista:-
 pergunta('Possui o desjo de trabalhar em qualquer regigião do país?'),
 pergunta('Possui afinidade com a criação de animais de granja?'),
-pergunta('Possui capacidade de analise, prevenção e de solução de problemas no campo
-	de zootecnia?').
+pergunta('Possui capacidade de analise, prevenção e de solução de problemas no campo de zootecnia?').
+
 agronomo:-
 pergunta('Possui capacidade de integração e conciliação agrossocial?'),
 pergunta('Possui experiencia com manejo sustentavel e produção vegetal?'),
@@ -79,3 +79,36 @@ politico:-
 pergunta('Possui vontade de realizar estudos e pesquisas sociais além de economicas e politicas?'),
 pergunta('Possui afinidade em elaborar documentos técnicos?'),
 pergunta('Possui interesse em gestão territorial e socioambiental?').
+
+% Saude 
+medico:-
+pergunta('Você tem vocação para o serviço e sensibilidade social?'),
+pergunta('Você tem boa saúde física e mental?'),
+pergunta('Você tem capacidade de liderança e ética moral?').
+
+farmaceutico:- 
+pergunta('Você tem vocação para o estudo de biologia e química?'), 
+pergunta('Você tem interesse pelo atendimento na área da saúde em relação ao uso de medicamentos?'), 
+pergunta('Você tem inclinações e destreza para manipular aparelhos, equipamentos e substâncias em laboratórios?').
+
+% Ciencias Fisicas E Matematicas
+fisico:-
+pergunta('Você tem predisposição para trabalhos científicos?'), 
+pergunta('Você é curioso e interessado em fenômenos naturais?'), 
+pergunta('Você tem engenhosidade e criatividade para desenvolver modelos concretos com base na aplicação das leis físicas?'). 
+
+matematico:-
+pergunta('Você tem capacidade de abstração e pensamento lógico?'), 
+pergunta('Você tem habilidade para lidar com matemática?'),
+pergunta('Você tem um alto grau de responsabilidade e disciplina para o trabalho?').
+
+% Educação e Ciencias Da comunicação
+ccomunicacao:-
+pergunta('Tem empatia comunicacional?'), 
+pergunta('Tem sensibilidade e responsabilidade social?'), 
+pergunta('Tem capacidade de comunicação oral, escrita e audiovisual?').
+
+educacao:-
+pergunta('Você tem um equilíbrio emocional estável?'), 
+pergunta('Você tem expressão adequada para a idade das crianças, através da linguagem falada e gestual?'), 
+pergunta('Você tem criatividade e dinamismo?').

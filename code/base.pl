@@ -21,3 +21,15 @@ carrera('Engenheiro Agronomo'):- agronomo,!.
 % Direito e Ciencias Politicas
 carrera('Advogado'):- advogado,!.
 carrera('Cientista Politico'):- politico,!.
+
+% Saude
+carreira('Medico'):- medico,!.
+carreira('Farmaceutico'):- farmaceutico,!.
+
+% Ciencias Fisicas E Matematicas
+carreira('Fisico'):- fisico,!.
+carreira('Matematico'):- matematico,!.
+
+% Educação e Ciencias Da comunicação
+carreira('Ciencias da Comunicação'):- ccomunicacao,!.
+carreira('Educação'):- educacao,!.
