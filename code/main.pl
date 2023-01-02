@@ -50,3 +50,29 @@ age_test(AgeRange) :-
 	;
 		write('Entrada inválida!')
 	).
+
+education_test(EducationLevel) :-
+	( EducationLevel == 1 ->
+		write('Quanto tempo você trabalhou, somadas suas experiencias profissionais? '),nl,
+        write('1. 0-2 anos '), nl,
+        write('2. 3-5 anos '), nl,
+        write('3. 6+ anos '), nl,
+        read(ExperienceLevel),
+        experience_test(ExperienceLevel)
+	; EducationLevel == 2 ->
+		write('Quanto tempo você trabalhou, somadas suas experiencias profissionais? '),nl,
+        write('1. 0-2 anos '), nl,
+        write('2. 3-5 anos '), nl,
+        write('3. 6+ anos '), nl,
+        read(ExperienceLevel),
+        experience_test(ExperienceLevel)
+	; EducationLevel == 3 ->
+		write('Quanto tempo você trabalhou, somadas suas experiencias profissionais? '),nl,
+        write('1. 0-2 anos '), nl,
+        write('2. 3-5 anos '), nl,
+        write('3. 6+ anos '), nl,
+        read(ExperienceLevel),
+        experience_test(ExperienceLevel)
+	;
+		write('Entrada inválida!')
+	).
