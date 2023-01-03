@@ -1,5 +1,34 @@
 :- use_module(library(clpfd)).
 
+
+carreira('Engenheiro de software').
+carreira('Diplomata').
+carreira('Policial militar').
+carreira('Atleta').
+carreira('Musico').
+carreira('Maestro').
+carreira('Físico').
+carreira('Matemático').
+carreira('Terapeuta').
+carreira('Psicologo').
+
+
+anglofono('Engenheiro de software').
+anglofono('Diplomata').
+
+aptidao_fisica('Policial militar').
+aptidao_fisica('Atleta').
+
+aptidao_musical('Musico').
+aptidao_musical('Maestro').
+
+gosta_matematica('Físico').
+gosta_matematica('Matemático').
+
+gosta_conversar('Terapeuta').
+gosta_conversar('Psicologo').
+
+
 start :-
 	write('Qual a sua idade? '), nl,
 	write('1. entre 15 e 24 '), nl,
