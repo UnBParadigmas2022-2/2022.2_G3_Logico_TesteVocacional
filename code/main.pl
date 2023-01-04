@@ -41,35 +41,7 @@ start :-
 
 
 age_test(AgeRange) :-
-	( AgeRange == 1 ->
-	 	write('Qual sua formação educacional? '),nl,
-        write('1. Ensino Médio '), nl,
-        write('2. Ensino Superior '), nl,
-        write('3. Ensino Superior +'), nl,
-        read(EducationLevel),
-        education_test(EducationLevel)
-	; AgeRange == 2 ->
-	 	write('Qual sua formação educacional? '),nl,
-        write('1. Ensino Médio '), nl,
-        write('2. Ensino Superior '), nl,
-        write('3. Ensino Superior +'), nl,
-        read(EducationLevel),
-        education_test(EducationLevel)
-	; AgeRange == 3 ->
-	 	write('Qual sua formação educacional? '),nl,
-        write('1. Ensino Médio '), nl,
-        write('2. Ensino Superior '), nl,
-        write('3. Ensino Superior +'), nl,
-        read(EducationLevel),
-        education_test(EducationLevel)
-	; AgeRange == 4 ->
-		write('Qual sua formação educacional? '),nl,
-        write('1. Ensino Médio '), nl,
-        write('2. Ensino Superior '), nl,
-        write('3. Ensino Superior +'), nl,
-        read(EducationLevel),
-        education_test(EducationLevel)
-	; AgeRange == 5 ->
+	( (  AgeRange == 1 ; AgeRange == 2 ; AgeRange == 3 ; AgeRange == 4 ; AgeRange == 5) ->
 	 	write('Qual sua formação educacional? '),nl,
         write('1. Ensino Médio '), nl,
         write('2. Ensino Superior '), nl,
