@@ -1,71 +1,201 @@
-:- module(pce_image_view, [pce_image_view/1]).
-:-use_module(library(pce)).
+:- use_module(library(pce)).
+:- pce_image_directory('../img').
+:- use_module(library(pce_style_item)).
+:- dynamic color/2.
 
-t1:-new(D,dialog('Demo Fenster')),send(D,open).
+resource(img_inicial, image, image('inicio.jpg')).
+resource(img_principal, image, image('img_principal.jpg')).
+resource(ingles, image, image('ingles.jpg')).
+resource(fisico, image, image('fisico.jpg')).
+resource(musica, image, image('musica.jpg')).
+resource(matematica, image, image('matematica.jpg')).
+resource(conversa_pessoas, image, image('conversa_pessoas.jpg')).
 
-t2:-new(D,dialog('Demo Window')),
-send(D,append,button(hallo)),
-send(D,open).
 
-t3:-new(D,dialog('Demo Window')),
-send(D,append,button(hallo,
-message(@prolog,wenn_gedrueckt,D))),
-send(D,open).
-wenn_gedrueckt(D):-send(D,destroy).
+mostrar_imagem(Tela, Imagem) :- new(Figura, figure),
+                                     new(Bitmap, bitmap(resource(Imagem),@on)),
+                                     send(Bitmap, name, 1),
+                                     send(Figura, display, Bitmap),
+                                     send(Figura, status, 1),
+                                     send(Tela, display,Figura,point(100,80)).
 
-t4:-new(D,dialog('Demo Window')),
-send(D,append,text_item(hallo,'dummy')),
-send(D,open).
+mostrar_imagem_profissao(Tela, Imagem) :-new(Figura, figure),
+                                     new(Bitmap, bitmap(resource(Imagem),@on)),
+                                     send(Bitmap, name, 1),
+                                     send(Figura, display, Bitmap),
+                                     send(Figura, status, 1),
+                                     send(Tela, display,Figura,point(20,100)).
+                                     
+imagem_pergunta(Janela, Imagem) :-new(Figura, figure),
+                                new(Bitmap, bitmap(resource(Imagem),@on)),
+                                send(Bitmap, name, 1),
+                                send(Figura, display, Bitmap),
+                                send(Figura, status, 1),
+                                send(Janela, display,Figura,point(500,60)).
 
-t5:-new(D,dialog('Demo Window')),
-new(T,text_item(hallo)),
-send(D,append,T),
-send(T,value,'muss nicht sein'),
-send(D,open).
 
-t6:-new(D,dialog('Demo Window')),
-new(T,text_item(hallo)),
-send(D,append,T),
-send(T,value,'dummy'),
-send(D,open),
-get(T,value,Text),
-writeln(Text).
+ nova_imagem(Janela, Imagem) :-new(Figura, figure),
+                                new(Bitmap, bitmap(resource(Imagem),@on)),
+                                send(Bitmap, name, 1),
+                                send(Figura, display, Bitmap),
+                                send(Figura, status, 1),
+                                send(Janela, display,Figura,point(0,0)).
 
-escreva_texto:-
-new(D,dialog('Escreva seu texto')),
-new(T,text_item(escreva)),
-send(D,append,T),
-send(D,append,button(ok,
-message(@prolog,abfrage,T))),
-send(D,append,button(fechar,
-message(@prolog,ende,D))),
-send(D,open).
-abfrage(T):-get(T,value,Text),writeln(Text).
-ende(D):-send(D,destroy).
 
-pce_image_view(Filename) :-
-    new(I, image(Filename)),
-    !,
-    new(B, bitmap(I)),
-    new(P, picture),
-    send(P, display, B),
-    send(P, open).
 
-iniciaTela:-
-    new(W, dialog('Menu Inicial')),
-    send(W, size, size(900,500)),
-    send(W, background,'#7D97D9'),
-    new(T,text_item(escreva)), 
-    send(W,append,T),
-    send(W,append,button(ok,
-    message(@prolog,abfrage,T))),
-    send(W,append,button(fechar,
-    message(@prolog,ende,W))),
-    new(I, image('c:/Users/User/Documents/paradigmas/prolog/image/dog.jpg')),
-    !,
-    new(B, bitmap(I)),
-    new(P, picture),
-    send(P, display, B),
-    send(P,size,size(600,300)),
-    send(W,append,P),
-    send(W,open).
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+  botoes:-borrado,
+                send(@boton, free),
+                mostrar_diagnostico(Enfermedad),
+                send(@texto, selection('Sua profissao segundo os dados eh:')),
+                send(@resp1, selection(Enfermedad)),
+                new(@boton, button('Iniciar consulta',
+                message(@prolog, botoes)
+                )),
+                send(@main, display,@boton,point(20,450)).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+   perguntar(Preg,Resp):-new(Di,dialog('Colsultar Dados:')),
+                        new(L2,label(texto,'Responda as seguintes peguntas:')),
+                        id_imagen_preg(Preg,Imagem),
+                        imagem_pergunta(Di,Imagem),
+                        new(La,label(prob,Preg)),
+                        new(B1,button(sim,and(message(Di,return,sim)))),
+                        new(B2,button(nao,and(message(Di,return,nao)))),
+                        send(Di, gap, size(25,25)),
+                        send(Di,append(L2)),
+                        send(Di,append(La)),
+                        send(Di,append(B1)),
+                        send(Di,append(B2)),
+                        send(Di,default_button,'sim'),
+                        send(Di,open_centered),get(Di,confirm,Answer),
+                        free(Di),
+                        Resp=Answer.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  interface_principal:-new(@main,dialog('Teste Vocacional',
+        size(1000,1000))),
+        new(@texto, label(nome,'O resultado do teste vocacional foi:',font('times','roman',18))),
+        new(@resp1, label(nome,'',font('times','roman',22))),
+        new(@lblExp1, label(nome,'',font('times','roman',14))),
+        new(@lblExp2, label(nome,'',font('times','roman',14))),
+        new(@sair,button('Sair',and(message(@main,destroy),message(@main,free)))),
+        new(@boton, button('Iniciar teste',message(@prolog, botoes))),
+
+        nova_imagem(@main, img_principal),
+        send(@main, background,'#63BEEB'),
+        send(@main, display,@boton,point(138,450)),
+        send(@main, display,@texto,point(20,130)),
+        send(@main, display,@sair,point(300,450)),
+        send(@main, display,@resp1,point(20,180)),
+        send(@main,open_centered).
+
+       borrado:- send(@resp1, selection('')).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+cria_interface_inicial:- new(@interface,dialog('Bem Vindo ao Teste Vocacional!',
+  size(1000,1000))),
+
+  mostrar_imagem(@interface, img_inicial),
+
+  send(@interface, background,'#708090'),
+  new(BotonComenzar,button('Comecar',and(message(@prolog,interface_principal) ,
+  and(message(@interface,destroy),message(@interface,free)) ))),
+  new(BotonSalir,button('Sair',and(message(@interface,destroy),message(@interface,free)))),
+  send(@interface,append(BotonComenzar)),
+  send(@interface,append(BotonSalir)),
+  send(@interface,open_centered).
+
+  :-cria_interface_inicial.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+conhecimento('Engenheiro de Software',
+['Voce fala ou tem interesse em falar ingles?']).
+
+conhecimento('Diplomata',
+['Voce fala ou tem interesse em falar ingles?']).
+
+conhecimento('Policial Militar',
+['Voce gostaria de praticar uma atividade que exige condicionamento fisico?']).
+
+conhecimento('Atleta',
+['Voce gostaria de praticar uma atividade que exige condicionamento fisico?']).
+
+conhecimento('Musico',
+['Voce tem interesse em musica ou alguma possibilidade relacionada?']).
+
+conhecimento('Maestro',
+['Voce tem interesse em musica ou alguma possibilidade relacionada?']).
+
+conhecimento('Fisico',
+['Voce tem interesse ou alguma aptidao na area de matematica?']).
+
+conhecimento('Matematico',
+['Voce tem interesse ou alguma aptidao na area de matematica?']).
+
+conhecimento('Terapeuta',
+['Voce gosta de conversar com pessoas?']).
+
+conhecimento('Psicologo',
+['Voce gosta de conversar com pessoas?']).
+
+conhecimento('Indefinida',
+[]).
+
+id_imagen_preg('Voce fala ou tem interesse em falar ingles?','ingles').
+id_imagem_preg('Voce gostaria de praticar uma atividade que exige condicionamento fisico?','fisico').
+id_imagen_preg('Voce tem interesse em musica ou alguma possibilidade relacionada?','musica').
+id_imagen_preg('Voce tem interesse ou alguma aptidao na area de matematica?','matematica').
+id_imagen_preg('Voce gosta de conversar com pessoas?','conversa_pessoas').
+
+ /* MOTOR DE INFERENCIA: Esta parte del sistema experto se encarga de
+ inferir cual es el diagnostico a partir de las preguntas realizadas
+ */
+
+:- dynamic conhecido/1.
+
+  mostrar_diagnostico(X):-faz_diagnostico(X),clean_scratchpad.
+  mostrar_diagnostico(sem_resultados):-clean_scratchpad .
+
+  faz_diagnostico(Diagnostico):-
+                            obtem_hipoteses_e_profissoes(Diagnostico, ListaDeSintomas),
+                            prova_presenca_de(Diagnostico, ListaDeSintomas).
+
+
+obtem_hipoteses_e_profissoes(Diagnostico, ListaDeSintomas):-
+                            conhecimento(Diagnostico, ListaDeSintomas).
+
+
+prova_presenca_de(Diagnostico, []).
+prova_presenca_de(Diagnostico, [Head | Tail]):- prova_verdade_de(Diagnostico, Head),
+                                              prova_presenca_de(Diagnostico, Tail).
+
+
+prova_verdade_de(Diagnostico, Sintoma):- conhecido(Sintoma).
+prova_verdade_de(Diagnostico, Sintoma):- not(conhecido(is_false(Sintoma))),
+pergunta_sobre(Diagnostico, Sintoma, Reply), Reply = 'sim'.
+
+
+pergunta_sobre(Diagnostico, Sintoma, Reply):- perguntar(Sintoma,Respuesta),
+                          process(Diagnostico, Sintoma, Respuesta, Reply).
+
+
+process(Diagnostico, Sintoma, sim, sim):- asserta(conhecido(Sintoma)).
+process(Diagnostico, Sintoma, nao, nao):- asserta(conhecido(is_false(Sintoma))).
+
+
+clean_scratchpad:- retract(conhecido(X)), fail.
+clean_scratchpad.
+
+
+conhecido(_):- fail.
+
+not(X):- X,!,fail.
+not(_).
