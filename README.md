@@ -76,7 +76,7 @@ Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 |Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
 | -- | -- | -- |
 | Eduarda Servídio  | Construção da Interface e ajuda na construção da base de dados e lógica do teste | Excelente |
-| Gustave Augusto Persijn  |  | Excelente |
+| Gustave Augusto Persijn  | Perguntas da base de conhecimento e refatoração da main. | Excelente |
 | Gustavo Afonso Pires  | Lógica para a função main e ajustes na interface. | Excelente |
 | Lorrany Oliveira  | Perguntas da base de conhecimento, refatoração da main. | Excelente |
 | Lorrayne Alves  | Nome das profissões e perguntas da base de conhecimento. | Excelente |
