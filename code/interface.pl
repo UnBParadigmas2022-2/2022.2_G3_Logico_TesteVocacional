@@ -47,7 +47,7 @@ imagem_pergunta(Janela, Imagem) :-new(Figura, figure),
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
   botoes:-borrado,
                 send(@boton, free),
-                mostrar_diagnostico(Carreira),
+                mostrar_resultado(Carreira),
                 send(@texto, selection('Sua profissao segundo os dados eh:')),
                 send(@resp1, selection(Carreira)),
                 new(@boton, button('Iniciar consulta',
@@ -105,10 +105,10 @@ cria_interface_inicial:- new(@interface,dialog('Bem Vindo ao Teste Vocacional!',
   mostrar_imagem(@interface, img_inicial),
 
   send(@interface, background,'#708090'),
-  new(BotonComencar,button('Comecar',and(message(@prolog,interface_principal) ,
+  new(BotonComecar,button('Comecar',and(message(@prolog,interface_principal) ,
   and(message(@interface,destroy),message(@interface,free)) ))),
   new(BotonSair,button('Sair',and(message(@interface,destroy),message(@interface,free)))),
-  send(@interface,append(BotonComencar)),
+  send(@interface,append(BotonComecar)),
   send(@interface,append(BotonSair)),
   send(@interface,open_centered).
 
@@ -157,34 +157,34 @@ id_imagen_preg('Voce gosta de conversar com pessoas?','conversa_pessoas').
 
 :- dynamic conhecido/1.
 
-  mostrar_diagnostico(X):-faz_diagnostico(X),clean_scratchpad.
-  mostrar_diagnostico(sem_resultados):-clean_scratchpad .
+  mostrar_resultado(X):-resultado(X),clean_scratchpad.
+  mostrar_resultado(sem_resultados):-clean_scratchpad .
 
-  faz_diagnostico(Diagnostico):-
-                            obtem_hipoteses_e_profissoes(Diagnostico, ListaDeSintomas),
-                            prova_presenca_de(Diagnostico, ListaDeSintomas).
-
-
-obtem_hipoteses_e_profissoes(Diagnostico, ListaDeSintomas):-
-                            conhecimento(Diagnostico, ListaDeSintomas).
+  resultado(Resultado):-
+                            obtem_hipoteses_e_profissoes(Resultado, ListaDePerguntas),
+                            prova_presenca_de(Resultado, ListaDePerguntas).
 
 
-prova_presenca_de(Diagnostico, []).
-prova_presenca_de(Diagnostico, [Head | Tail]):- prova_verdade_de(Diagnostico, Head),
-                                              prova_presenca_de(Diagnostico, Tail).
+obtem_hipoteses_e_profissoes(Resultado, ListaDePerguntas):-
+                            conhecimento(Resultado, ListaDePerguntas).
 
 
-prova_verdade_de(Diagnostico, Sintoma):- conhecido(Sintoma).
-prova_verdade_de(Diagnostico, Sintoma):- not(conhecido(is_false(Sintoma))),
-pergunta_sobre(Diagnostico, Sintoma, Reply), Reply = 'sim'.
+prova_presenca_de(Resultado, []).
+prova_presenca_de(Resultado, [Head | Tail]):- prova_verdade_de(Resultado, Head),
+                                              prova_presenca_de(Resultado, Tail).
 
 
-pergunta_sobre(Diagnostico, Sintoma, Reply):- perguntar(Sintoma,Respuesta),
-                          process(Diagnostico, Sintoma, Respuesta, Reply).
+prova_verdade_de(Resultado, Pergunta):- conhecido(Pergunta).
+prova_verdade_de(Resultado, Pergunta):- not(conhecido(is_false(Pergunta))),
+pergunta_sobre(Resultado, Pergunta, Reply), Reply = 'sim'.
 
 
-process(Diagnostico, Sintoma, sim, sim):- asserta(conhecido(Sintoma)).
-process(Diagnostico, Sintoma, nao, nao):- asserta(conhecido(is_false(Sintoma))).
+pergunta_sobre(Resultado, Pergunta, Reply):- perguntar(Pergunta,Resposta),
+                          process(Resultado, Pergunta, Resposta, Reply).
+
+
+process(Resultado, Pergunta, sim, sim):- asserta(conhecido(Pergunta)).
+process(Resultado, Pergunta, nao, nao):- asserta(conhecido(is_false(Pergunta))).
 
 
 clean_scratchpad:- retract(conhecido(X)), fail.
