@@ -1,13 +1,13 @@
 start:- consult('base.pl'),
-    write('Você fala ou tem interesse em falar ingles? '),
+    write('Você possui facilidade com cálculo? '),
     read(A),
-    write('Você gostaria de exercer uma atividade que demanda condicionamento físico? '),
+    write('Você possui facilidade em se comunicar? '),
     read(B),
-    write('Você tem interesse em música ou alguma aptidão relacionada?'),
+    write('Você gostaria de exercer uma atividade que demanda condicionamento físico?'),
     read(C),
-    write('Você tem interesse ou alguma aptidao na área de matemática?'),
+    write('Você gosta de ler?'),
     read(D),
-    write('Você gosta de conversar com pessoas?'),
+    write('Você se preocupa muito com os outros?'),
     read(E),
     
 
