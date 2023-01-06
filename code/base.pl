@@ -25,7 +25,7 @@ carreira('Economista'					,sim	,não	,não	,sim	,não).
 carreira('Biologo'						,não	,não	,não	,sim	,não).
 carreira('Biologo Microbiologo'			,não	,não	,não	,sim	,não).
 carreira('Biologo Marinho'				,não	,não	,não	,não	,não).
-carreira('Engenheiro Agricola'			,sim	,não	,não	,não	,não).
+carreira('Engenheiro Agricola'			,não	,não	,não	,não	,não).
 carreira('Engenheiro Zootecnista'		,sim	,não	,não	,não	,não).
 carreira('Engenheiro Agronomo'			,sim	,não	,não	,não	,não).
 carreira('Advogado'						,não	,sim	,não	,sim	,não).

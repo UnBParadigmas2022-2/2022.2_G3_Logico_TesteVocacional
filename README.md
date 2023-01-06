@@ -31,6 +31,7 @@ Links de documentação:
 ## Screenshots
 
 ### Versão 1 - sem interface:
+![image]()
 
 ### Versão 2 - Com problemas na integração com a base de dados e seu fluxo:
 1. Tela boas vindas para iniciar o sistema
@@ -76,7 +77,13 @@ Para instalar o programa:
 
 ### Versão 1 - sem interface:
 ```
-Colocar
+1. Abra o arquivo main.pl no SWI-Prolog (selecione a opção File no canto superior esquerdo, clique em Consult e abra o arquivo);
+2. No terminal, digite: 
+> [main].
+3. No terminal, digite:
+> start.
+4. Respondas perguntas com sim ou não seguidos de ponto
+5. Obtenha sua pool de sugestões sde carreira (:
 ```
 
 ### Versão 2 - Com problemas na integração com a base de dados e seu fluxo:
@@ -122,11 +129,16 @@ TEMPO: +/- 15min
 
 ## Outros 
 ### Lições Aprendidas
+O paradigma lógico oferece um novo olhar sobre o desenvolvimento de um sistema. Dito isso, o tema escolhido nos possibilitou trabalhar com uma abordagem de intesse da equipe: sistemas especialistas, a escolha nos deu a oportunidade de ter contato com algumas características da linguagem como o fato do retorno vir em forma de uma pool de respostas ao contrário do que estamos acostumados em que só um valor é retornado por padrão. Também foi possível ter a experiência da construção de uma base de dados formada por proposições que podem ser elaboradas de maneira que fiquem quase que em linguagem natural sanando algumas dúvidas referentes a inteligência artificial que por teoria parecia apenas "Ifs" e "Elses". Outra característica observada foi em relação ao front end, área que participantes da equipe têm afinidade, foi difícil entender o funcionamento e até mesmo quando algo legal foi montado se deu por meio de imagens e encaixe dos campos pré-definidos.
 
 ### Percepções 
 Nota-se que o prolog e o paradigma lógico em geral estão explícitos em um nicho de conhecimento da programação, mas as práticas da linguagem estão difusas em quase tudo da programação moderna, apenas não nos damos conta disso. Foi possível notar que o paradigma lógico funciona de maneira singular para algumas abordagens de problema, sendo mais eficaz do que outros paradigmas. No contexto da nossa aplicação, é perceptível também a importância de uma base de dados bem construída e estruturada, e as consequências e fragilidades no resultado do projeto.  
 
 ### Contribuições e Fragilidades 
+Quanto as fragilidades, pode-se perceber que cada implementação tem sua particularidade e algumas uma cobre uma fragilidade da outra mas em geral:
+* Implementação 1: interface por fazer e lógica simples.
+* Implementação 2: contribuir com mais questões para cada profissão.
+* Implementação 3: lógica simples, ultiliza de uma tabela verdade para montar a base. 
 
 ### Trabalhos Futuros 
 Em trabalhos futuros, sugere-se utilizar recursos da estatística para ponderar as respostas e ter mais exatidão na profissão que será retornada. Ademais adicionar uma lógica mais sofisticada ao sistema de match e aumentar a base de dados para se ter um resultado mais preciso, o que melhoraria a lógica e filtraria as respostas para um teste mais avançado, são melhorias construtivas para evoluir a aplicação. 
