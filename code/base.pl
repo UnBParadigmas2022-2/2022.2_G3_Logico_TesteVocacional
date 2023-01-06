@@ -3,7 +3,7 @@
 %% Carreiras ( nome, calculo, comunicacao, aptidao fisica, leitura, empatia)
 carreira('Psicólogo'					,não	,sim	,não	,sim	,sim).
 carreira('Arquiteto'					,sim	,sim	,sim	,sim	,sim).       
-carreira('Dançarino'					,não	,sim	,sim,	,não	,não).      
+carreira('Dançarino'					,não	,sim	,sim	,não	,não).      
 carreira('Artista plástico'				,não	,não	,não	,não	,não).     
 carreira('Personal trainer'				,não	,sim	,sim	,não	,sim).
 carreira('Designer'						,não	,sim	,não	,não	,não).  

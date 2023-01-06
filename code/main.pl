@@ -1,21 +1,4 @@
-:- consult('base.pl').
-
-
-%carreira                        ,anglofono ,apt_fisica  ,apt_mus,  apt_mat,  gosta_conversar
-carreira('Engenheiro de software',sim       ,não         ,não      ,não      ,não).
-carreira('Diplomata'             ,sim       ,não         ,não      ,não      ,não).
-carreira('Policial militar'      ,não       ,sim         ,não      ,não      ,não).
-carreira('Atleta'                ,não       ,sim         ,não      ,não      ,não).
-carreira('Musico'                ,não       ,não         ,sim      ,não      ,não).
-carreira('Maestro'               ,não       ,não         ,sim      ,não      ,não).
-carreira('Físico'                ,não       ,não         ,não      ,sim      ,não).
-carreira('Matemático'            ,não       ,não         ,não      ,sim      ,não).
-carreira('Terapeuta'             ,não       ,não         ,não      ,não      ,sim).
-carreira('Psicologo'             ,não       ,não         ,não      ,não      ,sim).
-carreira('Indefinida'            ,não       ,não         ,não      ,não      ,não).
-
-
-start:-
+start:- consult('base.pl'),
     write('Você fala ou tem interesse em falar ingles? '),
     read(A),
     write('Você gostaria de exercer uma atividade que demanda condicionamento físico? '),
@@ -28,7 +11,4 @@ start:-
     read(E),
     
 
-    carreira(Z,A,B,C,D,E),
-    
-
-    write(Z).
+    findall(X, carreira(X,A,B,C,D,E), Lista), write(Lista).
