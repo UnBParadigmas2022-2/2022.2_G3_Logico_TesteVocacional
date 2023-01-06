@@ -8,7 +8,7 @@
 
 |Matrícula  |  Aluno |
 | --------- | ------------------------------------------------------ |
-| 170161897 | [Eduarda Servídio](https://github.com/ServidioEC)      | 
+| 170161897 | [Eduarda Servidio Claudino](https://github.com/ServidioEC)      | 
 | 190046091 | [Gustave Augusto Persijn](https://github.com/gpersijn) |
 | 170034992 | [Gustavo Afonso Pires](https://github.com/GustavoAPS)  |
 | 180113992 | [Lorrany Oliveira](https://github.com/Lorranyoliveira) |
@@ -30,13 +30,31 @@ Links de documentação:
 
 ## Screenshots
 
+### Versão 1 - sem interface:
+
+### Versão 2 - Com problemas na integração com a base de dados e seu fluxo:
 1. Tela boas vindas para iniciar o sistema
+![image](https://user-images.githubusercontent.com/52542729/211066119-fb895ca8-ff1e-4915-b296-b8aa9e6be8aa.png)
 
 2. Tela para iniciar o teste
+![image](https://user-images.githubusercontent.com/52542729/211066152-04e81dda-5780-4a8a-a429-fd7871801fe9.png)
 
-3. Exemplo de pergunta
+3. Tela com exemplo de perguntas
+![image](https://user-images.githubusercontent.com/52542729/211066179-18872b79-e461-45bb-9301-9170bef57ce9.png)
 
-4. Exemplo Resultado fornecido
+4. Tela com exemplo de resultado
+![image](https://user-images.githubusercontent.com/52542729/211066214-53910917-4f1f-423c-af60-eb99ccf2d095.png)
+
+### Versão 3 - Completa e funcionando com interface:
+
+1. Tela inicial
+![image](https://user-images.githubusercontent.com/52542729/211065688-2b2beb19-a9ea-45fb-af1b-cd3af9d6f199.png)
+
+2. Tela com as perguntas respondidas
+![image](https://user-images.githubusercontent.com/52542729/211065758-fd2d46cf-8695-437b-9963-0e6d926f5ec5.png)
+
+3. Tela com o resultado a partir da resposta:
+![image](https://user-images.githubusercontent.com/52542729/211065778-26e5ced7-a002-41e9-b41d-d68becd4e1c8.png)
 
 ## Instalação 
 **Linguagens**: Prolog<br>
@@ -60,6 +78,28 @@ Explique como usar seu projeto. Procure ilustrar em passos, com apoio de telas d
 
 Abra o SWI-Prolog, selecione a opção File no canto superior esquerdo, clique em Consult e abra o arquivo .pl;
 
+### Versão 1 - sem interface:
+```
+Colocar
+```
+
+### Versão 2 - Com problemas na integração com a base de dados e seu fluxo:
+```
+1. Abra o arquivo interface.pl no SWI-Prolog (selecione a opção File no canto superior esquerdo, clique em Consult e abra o arquivo);
+2. Clique no botão "Comecar", em seguida no botão "Iniciar Consulta";
+3. Responda as perguntas que aparecerem;
+4. A aplicação dará uma resposta de carreira de acordo com suas respostas;
+5. Caso queira, repita o processo, basta clicar no botão "Iniciar Consulta" novamente.
+```
+
+### Versão 3 - Completa e funcionando com interface:
+```
+1. Abra o arquivo main_refatorada.pl no SWI-Prolog (selecione a opção File no canto superior esquerdo, clique em Consult e abra o arquivo);
+2. Responda as perguntas que aparecem na tela;
+3. Clique no botão "Ok";
+4. A aplicação dará uma resposta de carreira de acordo com suas respostas;
+5. Caso queira, repita o processo, basta fechar a aba do resultado, alterar as respostas e clicar novamente no botão "Ok" para envio das novas respostas.
+```
 
 ## Vídeo
 Adicione 1 ou mais vídeos com a execução do projeto.
