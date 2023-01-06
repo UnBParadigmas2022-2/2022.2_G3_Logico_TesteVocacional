@@ -47,9 +47,9 @@ imagem_pergunta(Janela, Imagem) :-new(Figura, figure),
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
   botoes:-borrado,
                 send(@boton, free),
-                mostrar_diagnostico(Enfermedad),
+                mostrar_diagnostico(Carreira),
                 send(@texto, selection('Sua profissao segundo os dados eh:')),
-                send(@resp1, selection(Enfermedad)),
+                send(@resp1, selection(Carreira)),
                 new(@boton, button('Iniciar consulta',
                 message(@prolog, botoes)
                 )),
@@ -58,8 +58,8 @@ imagem_pergunta(Janela, Imagem) :-new(Figura, figure),
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-   perguntar(Preg,Resp):-new(Di,dialog('Colsultar Dados:')),
-                        new(L2,label(texto,'Responda as seguintes peguntas:')),
+   perguntar(Preg,Resp):-new(Di,dialog('Consultar Dados:')),
+                        new(L2,label(texto,'Responda as seguintes perguntas:')),
                         id_imagen_preg(Preg,Imagem),
                         imagem_pergunta(Di,Imagem),
                         new(La,label(prob,Preg)),
@@ -105,11 +105,11 @@ cria_interface_inicial:- new(@interface,dialog('Bem Vindo ao Teste Vocacional!',
   mostrar_imagem(@interface, img_inicial),
 
   send(@interface, background,'#708090'),
-  new(BotonComenzar,button('Comecar',and(message(@prolog,interface_principal) ,
+  new(BotonComencar,button('Comecar',and(message(@prolog,interface_principal) ,
   and(message(@interface,destroy),message(@interface,free)) ))),
-  new(BotonSalir,button('Sair',and(message(@interface,destroy),message(@interface,free)))),
-  send(@interface,append(BotonComenzar)),
-  send(@interface,append(BotonSalir)),
+  new(BotonSair,button('Sair',and(message(@interface,destroy),message(@interface,free)))),
+  send(@interface,append(BotonComencar)),
+  send(@interface,append(BotonSair)),
   send(@interface,open_centered).
 
   :-cria_interface_inicial.
@@ -154,10 +154,6 @@ id_imagem_preg('Voce gostaria de praticar uma atividade que exige condicionament
 id_imagen_preg('Voce tem interesse em musica ou alguma possibilidade relacionada?','musica').
 id_imagen_preg('Voce tem interesse ou alguma aptidao na area de matematica?','matematica').
 id_imagen_preg('Voce gosta de conversar com pessoas?','conversa_pessoas').
-
- /* MOTOR DE INFERENCIA: Esta parte del sistema experto se encarga de
- inferir cual es el diagnostico a partir de las preguntas realizadas
- */
 
 :- dynamic conhecido/1.
 
