@@ -1,6 +1,6 @@
 # Teste Vocacional Lógico 
 
-**Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T01 <br>
+**Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T02 <br>
 **Nro do Grupo**: 03<br>
 **Paradigma**: Lógico<br>
 
@@ -21,12 +21,12 @@
 O projeto Teste Vocacional Lógico é um projeto com a finalidade de exercitar o conhecimento da equipe no paradigma lógico. A aplicação criada baseia-se em um sistema especialista para ajudar o usuário a identificar qual possível carreira se adequa a suas características pessoais baseado em 5 perguntas feitas pelo sistema. 
 
 O projeto foi desenvolvido na disciplina de Paradigmas de Programação no semestre de 2022/2, onde o objetivo principal era aprofundar os conhecimentos da equipe sobre paradigma lógico. A temática foi escolhida a partir da decisão de que queríamos trabalhar com sistemas especialistas, tendo então duas possibilidades de projeto:
-Um jogo de palavras cruzadas ou um Teste Vocacional Lógico. A partir da consulta de algumas documentações listadas abaixo, o projeto seguiu sendo o último tema. 
+Um jogo de palavras cruzadas ou um Teste Vocacional Lógico. A partir da consulta de algumas documentações listadas abaixo, o projeto seguiu com o último tema. 
 
 Links de documentação:
-*   (Diagnóstico de peixes)[https://youtu.be/VjrAOdBPH1c]
-*   (Sistema Especialista de Teste Vocacional)[https://docplayer.es/55872312-Sistema-experto-test-vocacional-unt-autores-gutierrez-valdivia-carolina-lastra-bazan-maicol-docente-ing-diaz-pulido-arturo.html]
-*   (Diagnóstico médico)[https://www.youtube.com/watch?v=yVG9HZqsH-I]
+*   [Diagnóstico de peixes](https://youtu.be/VjrAOdBPH1c)
+*   [Sistema Especialista de Teste Vocacional](https://docplayer.es/55872312-Sistema-experto-test-vocacional-unt-autores-gutierrez-valdivia-carolina-lastra-bazan-maicol-docente-ing-diaz-pulido-arturo.html)
+*   [Diagnóstico médico](https://www.youtube.com/watch?v=yVG9HZqsH-I)
 
 ## Screenshots
 
@@ -59,24 +59,20 @@ Links de documentação:
 ## Instalação 
 **Linguagens**: Prolog<br>
 **Tecnologias**: SWI-Prolog<br>
-**Pré-requisito**:  Instalação do SWI-Prolog
-> Mac OS    : [clique aqui](https://www.youtube.com/watch?v=sAZbP2cotiM)
-> Linux     : [clique aqui](https://www.youtube.com/watch?v=3ghQz1SRJ84)
-> Windows   : [clique aqui](https://www.youtube.com/watch?v=FE1d5vauTlU)
-> Projeto   : [clone aqui](https://github.com/UnBParadigmas2022-2/2022.2_G3_Logico_TesteVocacional.git)
+**Pré-requisito**:  Instalação do SWI-Prolog (links abaixo)
+> Mac OS    : [clique aqui](https://www.youtube.com/watch?v=sAZbP2cotiM) <br>
+> Linux     : [clique aqui](https://www.youtube.com/watch?v=3ghQz1SRJ84) <br>
+> Windows   : [clique aqui](https://www.youtube.com/watch?v=FE1d5vauTlU) <br>
+> Projeto   : [clone aqui](https://github.com/UnBParadigmas2022-2/2022.2_G3_Logico_TesteVocacional.git) <br>
 
 ```
 Para instalar o programa:
     
     1. Para rodar o projeto é necessário baixar o SWI-Prolog;
-
     2. Clone o projeto.
 ```
 
 ## Uso 
-Explique como usar seu projeto. Procure ilustrar em passos, com apoio de telas do software, seja com base na interface gráfica, seja com base no terminal. Nessa seção, deve-se revelar de forma clara sobre o funcionamento do software.
-
-Abra o SWI-Prolog, selecione a opção File no canto superior esquerdo, clique em Consult e abra o arquivo .pl;
 
 ### Versão 1 - sem interface:
 ```
@@ -112,7 +108,7 @@ OBS: TODOS DEVEM PARTICIPAR, CONFERINDO PONTOS DE VISTA.
 TEMPO: +/- 15min
 
 ## Participações
-Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
+
 |Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
 | -- | -- | -- |
 | Eduarda Servídio  | Construção da Interface e ajuda na construção da base de dados e lógica do teste | Excelente |
@@ -125,15 +121,15 @@ Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 | Ugor Marcilio Brandão  | Construção da base dados , lógica do teste e ajuda na interface  | Excelente |
 
 ## Outros 
-Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
+### Lições Aprendidas
 
-(i) Lições Aprendidas
+### Percepções 
+Nota-se que o prolog e o paradigma lógico em geral estão explícitos em um nicho de conhecimento da programação, mas as práticas da linguagem estão difusas em quase tudo da programação moderna, apenas não nos damos conta disso. Foi possível notar que o paradigma lógico funciona de maneira singular para algumas abordagens de problema, sendo mais eficaz do que outros paradigmas. No contexto da nossa aplicação, é perceptível também a importância de uma base de dados bem construída e estruturada, e as consequências e fragilidades no resultado do projeto.  
 
-(ii) Percepções
+### Contribuições e Fragilidades 
 
-(iii) Contribuições e Fragilidades
-
-(iV) Trabalhos Futuros.
+### Trabalhos Futuros 
+Em trabalhos futuros, sugere-se utilizar recursos da estatística para ponderar as respostas e ter mais exatidão na profissão que será retornada. Ademais adicionar uma lógica mais sofisticada ao sistema de match e aumentar a base de dados para se ter um resultado mais preciso, o que melhoraria a lógica e filtraria as respostas para um teste mais avançado, são melhorias construtivas para evoluir a aplicação. 
 
 ## Fontes
 
@@ -150,6 +146,7 @@ Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não es
 * [https://dcm.ffclrp.usp.br/~augusto/teaching/ia/IA-Prolog-Conceitos-Avancados.pdf]
 * [https://www.swi-prolog.org/pldoc/man?section=quickstart]
 * [http://www.augustobaffa.pro.br/wiki/Prolog_Tutorial_Sum%C3%A1rio]
+* https://www.swi-prolog.org/pldoc/doc_for?object=manual
 
 4. Vídeos com temática parecida com o do projeto que serviram como referência:
 * [https://www.youtube.com/watch?v=RKjmH_plhKQ&t=245s]
