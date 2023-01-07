@@ -31,7 +31,11 @@ Links de documentação:
 ## Screenshots
 
 ### Versão 1 - sem interface:
+1. Tela de execução do programa
 ![image](https://github.com/UnBParadigmas2022-2/2022.2_G3_Logico_TesteVocacional/blob/1ce6a5fb292e527331043016bfd83657eab252d4/img/implementacao1.png)
+
+2. Execução do promgrama
+![image](https://github.com/UnBParadigmas2022-2/2022.2_G3_Logico_TesteVocacional/blob/46be51aa25d547519742e949d65391a542345704/img/imp1.gif)
 
 ### Versão 2 - Com problemas na integração com a base de dados e seu fluxo:
 1. Tela boas vindas para iniciar o sistema
@@ -46,6 +50,9 @@ Links de documentação:
 4. Tela com exemplo de resultado
 ![image](https://user-images.githubusercontent.com/52542729/211066214-53910917-4f1f-423c-af60-eb99ccf2d095.png)
 
+5. Execução do programa
+![image](https://github.com/UnBParadigmas2022-2/2022.2_G3_Logico_TesteVocacional/blob/46be51aa25d547519742e949d65391a542345704/img/imp2.gif)
+
 ### Versão 3 - Completa e funcionando com interface:
 
 1. Tela inicial
@@ -56,6 +63,9 @@ Links de documentação:
 
 3. Tela com o resultado a partir da resposta:
 ![image](https://user-images.githubusercontent.com/52542729/211065778-26e5ced7-a002-41e9-b41d-d68becd4e1c8.png)
+
+4. Execução do programa
+![image](https://github.com/UnBParadigmas2022-2/2022.2_G3_Logico_TesteVocacional/blob/46be51aa25d547519742e949d65391a542345704/img/ezgif.com-gif-maker.gif)
 
 ## Instalação 
 **Linguagens**: Prolog<br>
