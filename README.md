@@ -34,8 +34,10 @@ Links de documentação:
 1. Tela de execução do programa
 ![image](https://github.com/UnBParadigmas2022-2/2022.2_G3_Logico_TesteVocacional/blob/1ce6a5fb292e527331043016bfd83657eab252d4/img/implementacao1.png)
 
-2. Execução do promgrama
-![image](https://github.com/UnBParadigmas2022-2/2022.2_G3_Logico_TesteVocacional/blob/46be51aa25d547519742e949d65391a542345704/img/imp1.gif)
+2. Execução do progama
+<p align="center">
+<img width = "460" height "300" src ="img/imp1.gif"
+</p>
 
 ### Versão 2 - Com problemas na integração com a base de dados e seu fluxo:
 1. Tela boas vindas para iniciar o sistema
@@ -50,22 +52,25 @@ Links de documentação:
 4. Tela com exemplo de resultado
 ![image](https://user-images.githubusercontent.com/52542729/211066214-53910917-4f1f-423c-af60-eb99ccf2d095.png)
 
-5. Execução do programa
-![image](https://github.com/UnBParadigmas2022-2/2022.2_G3_Logico_TesteVocacional/blob/46be51aa25d547519742e949d65391a542345704/img/imp2.gif)
-
+5. Execução do progama 
+<p align ="center">
+<img width = "460" height "300" src ="img/imp2.gif"
+</p>
 ### Versão 3 - Completa e funcionando com interface:
 
-1. Tela inicial
+1. Tela inicial <br>
 ![image](https://user-images.githubusercontent.com/52542729/211065688-2b2beb19-a9ea-45fb-af1b-cd3af9d6f199.png)
 
 2. Tela com as perguntas respondidas
 ![image](https://user-images.githubusercontent.com/52542729/211065758-fd2d46cf-8695-437b-9963-0e6d926f5ec5.png)
 
-3. Tela com o resultado a partir da resposta:
+3. Tela com o resultado a partir da resposta: <br>
 ![image](https://user-images.githubusercontent.com/52542729/211065778-26e5ced7-a002-41e9-b41d-d68becd4e1c8.png)
 
-4. Execução do programa
-![image](https://github.com/UnBParadigmas2022-2/2022.2_G3_Logico_TesteVocacional/blob/46be51aa25d547519742e949d65391a542345704/img/ezgif.com-gif-maker.gif)
+4. Execução do progama 
+<p align ="center">
+<img width = "460" height "300" src ="img/ezgif.com-gif-maker.gif"
+</p>
 
 ## Instalação 
 **Linguagens**: Prolog<br>
