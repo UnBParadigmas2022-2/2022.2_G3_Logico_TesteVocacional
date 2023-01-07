@@ -179,3 +179,6 @@ Em trabalhos futuros, sugere-se utilizar recursos da estatística para ponderar 
 * [https://www.youtube.com/watch?v=RKjmH_plhKQ&t=245s]
 * [https://www.youtube.com/watch?v=lKXVqjs4a2U&t=208s]
 * [https://www.youtube.com/watch?v=K-Rj8PVeZCA&t=68s]
+
+## Apresentação
+[Link do vídeo de apresentação](https://youtu.be/UMXWccPIT_E).
